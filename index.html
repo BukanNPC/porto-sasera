@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasera Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: #c5dafe;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #fff;
+    }
+    header img {
+      width: 80px;
+    }
+    header nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+    }
+    header nav a:nth-child(2) {
+      background: #00c851;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+    header nav a:nth-child(3) {
+      background: red;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+    section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 180px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 40px;
+    }
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .testimonial, .timeline, .contact {
+      background: url('https://github.com/BukanNPC/porto-sasera/raw/main/assets/bg-tile.png');
+      background-size: 60px;
+      color: white;
+      padding: 40px 20px;
+    }
+    .contact {
+      background: #5b331c;
+      color: white;
+    }
+    .contact div {
+      margin: 10px 0;
+    }
+    .skills img {
+      height: 20px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/avatar.png" alt="Avatar">
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">LINKTREE</a>
+      <a href="#">DONATE</a>
+    </nav>
+  </header>
 
+  <section>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/yt.png" alt="YouTube">
+        <p><strong>Sasera</strong><br>93k Subscribers</p>
+        <p>High-Quality Minecraft Videos with Stunning Edits</p>
+        <a href="#">View &gt;</a>
+      </div>
+      <div class="card">
+        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/ig.png" alt="Instagram">
+        <p><strong>sasera_yt</strong><br>787 Followers</p>
+        <p>Behind-the-Scenes, Personal Moments & Updates</p>
+        <a href="#">View &gt;</a>
+      </div>
+      <div class="card">
+        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/tiktok.png" alt="TikTok">
+        <p><strong>sasera_yt</strong><br>2.287 Followers</p>
+        <p>Short Minecraft Clips & Trending Videos</p>
+        <a href="#">View &gt;</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/profile-polaroid.png" style="width: 200px; transform: rotate(-5deg);">
+      <div style="margin-left: 20px; max-width: 400px; text-align: left;">
+        <h2>ABOUT ME</h2>
+        <p>Hi! I'm Sasera, a motion graphic editor passionate about Minecraft content. I've been editing since I was 11, and I love turning ideas into engaging, high-energy videos. Always aiming to level up my skills and create something memorable.</p>
+        <div class="skills">
+          <strong>SKILLS</strong>
+          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/pr.png">
+          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/ae.png">
+          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/ps.png">
+          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/au.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <h2>TESTIMONIAL</h2>
+    <p>"epicc dan clean, lanjutkan ser" - ItsSandwich</p>
+    <p>"Project muu keren keren broww"</p>
+    <p>"thats my editor right here🤧" - daiki</p>
+    <p>"Master of editing 🙏" - NasrilAlAziz</p>
+  </section>
+
+  <section class="timeline">
+    <h2>EDITING TIMELINE</h2>
+    <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/timeline.png" style="width: 90%; max-width: 800px;">
+  </section>
+
+  <section class="contact">
+    <h2>CONTACT ME</h2>
+    <div><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/email.png" height="16"> ssaseraaaa@gmail.com</div>
+    <div><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/discord.png" height="16"> Sasera#2097</div>
+    <div><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/ig.png" height="16"> @sasera_yt (Quickest Response)</div>
+  </section>
+</body>
+</html>
