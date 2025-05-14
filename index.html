@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sasera Portfolio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
   <style>
@@ -60,10 +60,6 @@
     .card img {
       width: 40px;
     }
-    .section-title {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
     .testimonial, .timeline, .contact {
       background: url('https://github.com/BukanNPC/porto-sasera/raw/main/assets/BackgroundTesti.png');
       background-size: 60px;
@@ -81,6 +77,32 @@
       height: 20px;
       margin-left: 5px;
     }
+
+    /* Timeline Slider Styles */
+    .timeline-slider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .timeline-slider img.main-timeline {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    .arrow-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .arrow-btn img {
+      width: 30px;
+      height: 30px;
+    }
   </style>
 </head>
 <body>
@@ -95,42 +117,12 @@
 
   <section>
     <div class="card-container">
-      <div class="card">
-        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/youtube.png" alt="YouTube">
-        <p><strong>Sasera</strong><br>93k Subscribers</p>
-        <p>High-Quality Minecraft Videos with Stunning Edits</p>
-        <a href="#">View &gt;</a>
-      </div>
-      <div class="card">
-        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/instagram.png" alt="Instagram">
-        <p><strong>sasera_yt</strong><br>787 Followers</p>
-        <p>Behind-the-Scenes, Personal Moments & Updates</p>
-        <a href="#">View &gt;</a>
-      </div>
-      <div class="card">
-        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/tiktok.png" alt="TikTok">
-        <p><strong>sasera_yt</strong><br>2.287 Followers</p>
-        <p>Short Minecraft Clips & Trending Videos</p>
-        <a href="#">View &gt;</a>
-      </div>
+      <!-- ...Card section tetap sama... -->
     </div>
   </section>
 
   <section>
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/profile-polaroid.png" style="width: 200px; transform: rotate(-5deg);">
-      <div style="margin-left: 20px; max-width: 400px; text-align: left;">
-        <h2>ABOUT ME</h2>
-        <p>Hi! I'm Sasera, a motion graphic editor passionate about Minecraft content. I've been editing since I was 11, and I love turning ideas into engaging, high-energy videos. Always aiming to level up my skills and create something memorable.</p>
-        <div class="skills">
-          <strong>SKILLS</strong>
-          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/PR.png">
-          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/AE.png">
-          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/PS.png">
-          <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/AU.png">
-        </div>
-      </div>
-    </div>
+    <!-- ...About Me section tetap sama... -->
   </section>
 
   <section class="testimonial">
@@ -143,14 +135,32 @@
 
   <section class="timeline">
     <h2>EDITING TIMELINE</h2>
-    <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/timeline.png" style="width: 90%; max-width: 800px;">
+    <div class="timeline-slider">
+      <button class="arrow-btn" onclick="changeSlide(-1)">
+        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/Arrow_Left.png" alt="Left">
+      </button>
+      <img id="timelineImage" class="main-timeline" src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/timeline-1.png" alt="Timeline">
+      <button class="arrow-btn" onclick="changeSlide(1)">
+        <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/Arrow_Right.png" alt="Right">
+      </button>
+    </div>
   </section>
 
   <section class="contact">
-    <h2>CONTACT ME</h2>
-    <div><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/email.png" height="16"> ssaseraaaa@gmail.com</div>
-    <div><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/discord.png" height="16"> Sasera#2097</div>
-    <div><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/instagram.png" height="16"> @sasera_yt (Quickest Response)</div>
+    <!-- ...Contact section tetap sama... -->
   </section>
+
+  <script>
+    const timelineImage = document.getElementById('timelineImage');
+    let currentSlide = 1;
+    const totalSlides = 5;
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide > totalSlides) currentSlide = 1;
+      if (currentSlide < 1) currentSlide = totalSlides;
+      timelineImage.src = `https://github.com/BukanNPC/porto-sasera/raw/main/assets/timeline-${currentSlide}.png`;
+    }
+  </script>
 </body>
 </html>
