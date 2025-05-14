@@ -83,6 +83,11 @@
       background-size: cover;
       color: white;
     }
+    .mywork {
+      background: url('https://github.com/BukanNPC/porto-sasera/raw/main/assets/BG-MyWorks.png') no-repeat center center;
+      background-size: cover;
+      color: white;
+    }
     .timeline-slider {
       position: relative;
       display: flex;
@@ -120,6 +125,15 @@
       height: 20px;
       margin-left: 5px;
     }
+    .socials {
+      margin-top: 20px;
+    }
+    .socials span {
+      display: inline-block;
+      margin: 5px 10px;
+      font-size: 12px;
+      color: #000;
+    }
     @media (max-width: 768px) {
       .card-container {
         flex-direction: column;
@@ -154,6 +168,11 @@
           <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/PS.png">
           <img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/AU.png">
         </div>
+        <div class="socials">
+          <span><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/youtube.png" height="12"> 9K YouTube</span>
+          <span><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/tiktok.png" height="12"> 40K TikTok</span>
+          <span><img src="https://github.com/BukanNPC/porto-sasera/raw/main/assets/instagram.png" height="12"> 6K Instagram</span>
+        </div>
       </div>
     </div>
   </section>
@@ -179,7 +198,7 @@
     </div>
   </section>
 
-  <section style="background-image: url('https://github.com/BukanNPC/porto-sasera/raw/main/assets/BG-MyWorks.png');">
+  <section class="mywork">
     <h2>MY WORKS</h2>
     <div class="timeline-slider">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
